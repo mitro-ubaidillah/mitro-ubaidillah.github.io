@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form-v8 by Colorlib</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="css/sourcesanspro-font.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="form-v8">
+	<div class="page-content">
+		<div class="form-v8-content">
+			<div class="form-left">
+				<div class="identitas">
+					<h1>Enkripsi & Deskripsi Cipher Transposisi</h1>
+					<h2>Kelompok 6</h2>
+					<p>
+						<h4>Muchamad Mitro Ubaidillah</h4>
+						<h4>Adimas Chandra</h4>
+						<h4>Wisnu Prasetiyawan</h4>
+					</p>
+				</div>
+			</div>
+			<div class="form-right">
+				<div class="tab">
+					<div class="tab-inner">
+						<button class="tablinks" onclick="openCity(event, 'sign-up')" id="defaultOpen">Enkripsi</button>
+					</div>
+					<div class="tab-inner">
+						<button class="tablinks" onclick="openCity(event, 'sign-in')">Deskripsi</button>
+					</div>
+				</div>
+				<div class="form-detail">
+					<div class="tabcontent" id="sign-up">
+						<div class="form-row">
+							<span class="label">Plain Text</span><br>
+							<textarea name="" id="input-plainteks" cols="30" rows="2" required></textarea>
+						</div>
+						<div class="form-row">
+							<span class="label">Key</span><br>
+							<input type="text" name="password" id="key" required>
+						</div>
+						<div class="form-row">
+							<button id="btn-enkripsi" class="register" onclick="tampilkan_enkripsi()">Enkripsi</button>
+							<!-- <input type="submit" name="register" id="btn-enkripsi" class="register" value="Enkripsi"> -->
+						</div>
+						<div class="form-row-last">
+							<span class="label">Result</span><br>
+							<textarea name="" id="result-enc" class="input-text" cols="30" rows="2" readonly aria-readonly="true"></textarea>
+							<!-- <input type="text" name="full_name" id="full_name" class="input-text" required> -->
+							<div id="result-enc"></div>
+						</div>
+					</div>
+				</div>
+				<div class="form-detail">
+					<div class="tabcontent" id="sign-in">
+						<div class="form-row">
+							<span class="label">Chiper Text</span><br>
+							<textarea name="" id="input-ciphertext" cols="30" rows="2" required></textarea>
+						</div>
+						<div class="form-row">
+							<span class="label">Key</span><br>
+							<input type="text" name="password" id="keycipher" required>
+						</div>
+						<div class="form-row">
+							<button id="btn-deskripsi" class="register" onclick="tampilkan_deskripsi()">Deskripsi</button>
+							<!-- <input type="submit" name="register" id="btn-deskripsi" class="register" value="Deskripsi"> -->
+						</div>
+						<div class="form-row-last">
+							<span class="label">Result</span><br>
+							<textarea name="" id="result-desc" class="input-text" cols="30" rows="2" readonly aria-readonly="true"></textarea>
+							<!-- <input type="text" name="full_name" id="full_name" class="input-text" required> -->
+							<div id="result-enc"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+	<script type="text/javascript">
+		function openCity(evt, cityName) {
+		    var i, tabcontent, tablinks;
+		    tabcontent = document.getElementsByClassName("tabcontent");
+		    for (i = 0; i < tabcontent.length; i++) {
+		        tabcontent[i].style.display = "none";
+		    }
+		    tablinks = document.getElementsByClassName("tablinks");
+		    for (i = 0; i < tablinks.length; i++) {
+		        tablinks[i].className = tablinks[i].className.replace(" active", "");
+		    }
+		    document.getElementById(cityName).style.display = "block";
+		    evt.currentTarget.className += " active";
+		}
+
+		// Get the element with id="defaultOpen" and click on it
+		document.getElementById("defaultOpen").click();
+	</script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
